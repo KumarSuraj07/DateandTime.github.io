@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <script>
+        let a;
+        let date;
+        let time;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() => {
+            a = new Date();
+            date = a.toLocaleDateString(undefined, options);
+            time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            document.getElementById('time').innerHTML = time + "<br>" + date;
+        }, 1000);
+    </script>
+    <style>
+        body{
+            background-color: #2E4053;
+        }
+        .info {
+            background: #1ABC9C;
+            padding: 20px;
+            text-decoration: none;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .container {
+            display: inline-block;
+            margin-left: 62%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        a {
+            padding: 10px;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: black;
+        }
+
+        a:hover {
+            color: white;
+            transition: 0.5s;
+
+        }
+
+        input {
+            padding: 5px;
+            /* border: 2px solid rgb(0, 0, 0); */
+            border-radius: 500px;
+            border: none;
+        }
+
+        button {
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-left: 5px;
+            color: white;
+            background-color: #2E4053;
+            border: none;
+        }
+
+        img {
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            margin-top: -16.6px;
+            margin-left: -15px;
+            border-radius: 50%;
+        }
+
+        .firstContainer {
+            background: #1ABC9C ;
+            height: 300px;
+            width: 600px;
+            margin-left: 28%;
+            padding: 5px 20px;
+            margin-top: 100px;
+            border: 6px solid black;
+            border-style:groove;
+        }
+
+        .Browse {
+            padding: 10px;
+            position: relative;
+            margin-top: 30px;
+            background: lightseagreen;
+        }
+        label{
+            padding: 10px;
+        }
+        select{
+            text-decoration: none;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="info">
+        <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+            <img src="td.gif" alt="">
+            <div class="container">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Features</a>
+                <i class="search"></i>
+                <input type="text" name="search" id="search">
+                <button class="search">search</button>
+            </div>
+        </div>
+    </nav>
+    <div class="firstContainer">
+        <div class="jumbotron">
+            <h1 class="display-4">Current time is: <span id="time"></span></h1>
+            <p>India Standard Time (IST) is 5:30 hours ahead of Coordinated Universal Time (UTC). </p>
+            <br><br><br><br>
+            <label for="cars">Choose Country :</label>
+            <select name="Country" id="Country">
+                <option value="none">None</option>
+                <option value="london">London</option>
+                <option value="germany">Germany</option>
+                <option value="rome">Rome</option>
+                <option value="unitedstates">United States</option>
+            </select>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
